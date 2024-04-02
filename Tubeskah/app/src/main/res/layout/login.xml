@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/label_mobile_number"
+        android:layout_width="323dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="284dp"
+        android:gravity="center_horizontal"
+        android:text="By continuing, you agree with our Terms & Conditions and Priacy Policy"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:text="Enter your mobile number to continue"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_mobile_number"
+        android:layout_width="372dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="36dp"
+        android:hint="+62 319-4932-1234"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_mobile_number" />
+
+    <Button
+        android:id="@+id/button_continue"
+        android:layout_width="361dp"
+        android:layout_height="61dp"
+        android:text="Login"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

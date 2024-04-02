@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
@@ -8,24 +10,44 @@
         android:id="@+id/label_mobile_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
         android:text="Enter your mobile number to continue"
         android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText_mobile_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="365dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
         android:hint="+62 319-4932-1234"
         android:inputType="phone"
-        android:layout_below="@id/label_mobile_number"/>
+        app:layout_constraintEnd_toEndOf="@+id/editText_additional_info"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_mobile_number" />
+
+    <EditText
+        android:id="@+id/editText_additional_info"
+        android:layout_width="245dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="7dp"
+        android:hint="Additional Info"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_continue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="197dp" />
 
     <Button
         android:id="@+id/button_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="114dp"
+        android:layout_height="56dp"
         android:text="Continue"
-        android:layout_below="@id/editText_mobile_number"
-        android:layout_marginTop="16dp"/>
+        tools:layout_editor_absoluteX="267dp"
+        tools:layout_editor_absoluteY="200dp" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
